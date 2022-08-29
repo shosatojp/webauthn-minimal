@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WebAuthn</title>
+</head>
+
+<body>
+    <h1>WebAuthn</h1>
+    <div>
+        <h2>webauthn</h2>
+        <label for="email">email</label>
+        <input id="email" type="text" placeholder="email" value="hoge@example.com">
+        <button id="register">1. register</button>
+        <button id="authenticate">2. authenticate</button>
+    </div>
+
+    <div>
+        <h2>log</h2>
+        <div id="log"></div>
+        <style>
+            #log>* {
+                font-family: monospace !important;
+                word-wrap: break-word;
+                word-break: break-all;
+            }
+
+        </style>
+    </div>
+</body>
+
+</html>
