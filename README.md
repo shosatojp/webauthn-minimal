@@ -2,38 +2,20 @@
 
 ## Get started
 
+#### 1. clone repository
+
 ```sh
 git clone https://github.com/shosatojp/webauthn-minimal.git
 cd webauthn-minimal
 ```
 
-modify `webauthn.shosato.jp` to your domain.
-
-```sh
-# install dependencies
-npm ci
-
-# build example fontend
-npm build
-
-# start auth server
-npm start
-```
-
-## Docker
+#### 2. modify `webauthn.shosato.jp` to your domain.
+#### 3. build
 
 ```
 docker-compose up --build
 ```
 
-## Files
+#### 4. deploy
 
-### Frontend
-
-- `public/`
-- `dist/` (generated)
-- `webpack.config.js`
-
-### Backend
-
-- `src/`
+- setup reverse proxy to pass requests to `127.0.0.1:3000` via your domain
