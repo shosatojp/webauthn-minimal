@@ -31,9 +31,9 @@ export class WebAuthnClient {
                 id: base64js.toByteArray(options.user.id),
             },
         };
-        console.debug(publicKey);
+        console.log(publicKey);
         const newCred: any = await navigator.credentials.create({ publicKey });
-        console.debug(newCred);
+        console.log(newCred);
         const resAttestaion = await fetch(this.host + '/attestation', {
             method: 'post',
             headers: { 'Content-Type': 'application/json' },
@@ -80,9 +80,9 @@ export class WebAuthnClient {
             }),
         };
 
-        console.debug(publicKey);
+        console.log(publicKey);
         const cred: any = await navigator.credentials.get({ publicKey });
-        console.debug(cred);
+        console.log(cred);
         const resAuthenticate = await fetch(this.host + '/authenticate', {
             method: 'post',
             headers: { 'Content-Type': 'application/json' },
