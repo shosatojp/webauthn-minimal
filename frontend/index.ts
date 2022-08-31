@@ -1,6 +1,6 @@
 import { WebAuthnClient } from './webauthn';
 
-const host = 'https://webauthn.shosato.jp';
+const host = '';
 const client = new WebAuthnClient(host);
 
 document.addEventListener('DOMContentLoaded', () => {

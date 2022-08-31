@@ -4,8 +4,11 @@ import { body, validationResult } from 'express-validator';
 import express from 'express';
 
 const db = new Map<string, { id: Uint8Array, publickey: string }>();
-const ORIGIN = 'https://webauthn.shosato.jp';
-const RPID = 'webauthn.shosato.jp';
+const ORIGIN = process.env.ORIGIN;
+const RPID = process.env.RPID;
+if (!ORIGIN || !RPID) {
+    throw new Error("environment variable ORIGIN and RPID is required");
+}
 const RPNAME = 'test-auth-server';
 
 const VALIDATORS = {
